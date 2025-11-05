@@ -1,8 +1,3 @@
-/* Hide only elements with .sidebar-expand-show when collapsed */
 [data-collapsed="true"] .sidebar-expand-show {
   display: none;
 }
-/*
-.branding {
-  display: none;
-} */

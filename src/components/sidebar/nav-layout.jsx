@@ -3,6 +3,7 @@ import * as Icons from "lucide-react";
 
 import resources from "@/data/resources.json";
 import { NavSidebarHeader } from "./nav-sidebar-header";
+import { NavSidebarFooter } from "./nav-sidebar-footer";
 
 import {
   Sidebar,
@@ -24,11 +25,19 @@ export function NavSidebarLayout() {
     icon: Icons[data.icon] || Icons.Folder,
   }));
 
+  // Bottom group items
+  const bottomItems = [
+    { title: "Search", url: "/search", icon: Icons.Search },
+    { title: "Settings", url: "/settings", icon: Icons.Settings },
+  ];
+
   return (
-    <Sidebar collapsible="icon" className="border-r">
+    <Sidebar collapsible="icon">
+      {/* Header */}
       <NavSidebarHeader />
 
-      <SidebarContent className="overflow-y-auto">
+      {/* Main scrollable content */}
+      <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Resources</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -36,8 +45,8 @@ export function NavSidebarLayout() {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild tooltip={item.title}>
-                    <a href={item.url} className="flex items-center gap-2">
-                      <item.icon className="h-4 w-4 shrink-0" />
+                    <a href={item.url}>
+                      <item.icon />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
@@ -47,6 +56,30 @@ export function NavSidebarLayout() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+
+      {/* Bottom group */}
+      <div className="mt-auto">
+        <SidebarGroup>
+          <SidebarGroupLabel>Quick Actions</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {bottomItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild tooltip={item.title}>
+                    <a href={item.url} >
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Footer */}
+        <NavSidebarFooter />
+      </div>
     </Sidebar>
   );
 }
