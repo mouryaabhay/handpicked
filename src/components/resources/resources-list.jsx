@@ -11,9 +11,9 @@ export default function ResourcesList() {
   return (
     <div className="space-y-8">
       {categories.map((category) => (
-        <div key={category.name} className="space-y-4">
+        <div key={category.name} className="space-y-4 border-2 rounded-lg p-6">
           {/* Category Header */}
-          <h1 className="text-2xl font-bold">{category.name}</h1>
+          <h1 className="flex text-2xl font-bold border-b-2"><icon/>{category.name}</h1>
 
           {category.subCategories.map((subCategory) => (
             <div key={subCategory.name} className="space-y-4">
