@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import HeaderCurrentSection from "./header-current-section";
 import HeaderSearchbar from "./header-searchbar";
 import HeaderGitHubStars from "./header-githubstar";
-import ThemeToggleGroup from "./ThemeToggleGroup";
+import { ThemeToggle } from "@/components/themes/theme-toggle";
 
 export function AppHeader() {
   return (
@@ -26,7 +26,7 @@ export function AppHeader() {
 
         <Separator orientation="vertical" className="mx-2 h-1" />
 
-        <ThemeToggleGroup />
+        <ThemeToggle />
       </div>
     </header>
   );

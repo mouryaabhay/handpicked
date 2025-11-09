@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { ResourceContext } from "@/contexts/ContextHub";
+import { ResourceProviderContext } from "@/contexts/resource-context";
 import { Separator } from "@/components/ui/separator";
 import ResourceCard from "./resource-card";
 
 export default function ResourcesList() {
-  const { categories } = useContext(ResourceContext);
+  const { categories } = useContext(ResourceProviderContext);
 
   if (!categories || categories.length === 0) return <p>No resources available.</p>;
 
@@ -13,7 +13,7 @@ export default function ResourcesList() {
       {categories.map((category) => (
         <div key={category.name} className="space-y-4 border-2 rounded-lg p-6">
           {/* Category Header */}
-          <h1 className="flex text-2xl font-bold border-b-2"><icon/>{category.name}</h1>
+          <h1 className="flex text-2xl font-bold border-b-2">{category.name}</h1>
 
           {category.subCategories.map((subCategory) => (
             <div key={subCategory.name} className="space-y-4">

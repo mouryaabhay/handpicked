@@ -15,10 +15,9 @@ export function GitHubStars({ owner, repo }) {
       }
 
       try {
-        const baseUrl = import.meta.env.VITE_GITHUB_API;
-        if (!baseUrl) throw new Error("VITE_GITHUB_API is not defined");
-
-        const res = await axios.get(baseUrl);
+        // Expect VITE_GITHUB_API to be the API root (e.g. https://api.github.com/repos)
+        const apiRoot = (import.meta.env.VITE_GITHUB_API || "https://api.github.com/repos").replace(/\/$/, "");
+        const res = await axios.get(`${apiRoot}/${owner}/${repo}`);
         const data = res.data;
 
         if (data && typeof data.stargazers_count === "number") {

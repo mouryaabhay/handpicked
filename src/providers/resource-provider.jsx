@@ -1,14 +1,12 @@
 import React from "react";
 import resourcesData from "@/data/resources.json";
-import { ResourceContext } from "./ContextHub";
+import { ResourceProviderContext } from "../contexts/resource-context";
 
 const ResourceProvider = ({ children }) => {
-  console.log("Providing resources data:", resourcesData);
-
   return (
-    <ResourceContext.Provider value={resourcesData}>
+    <ResourceProviderContext.Provider value={resourcesData}>
       {children}
-    </ResourceContext.Provider>
+    </ResourceProviderContext.Provider>
   );
 };
 

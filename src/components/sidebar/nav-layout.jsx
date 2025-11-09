@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import * as Icons from "lucide-react";
 import { Sidebar, SidebarContent } from "@/components/ui/sidebar";
-import { ResourceContext } from "@/contexts/ContextHub";
+import { ResourceProviderContext } from "@/contexts/resource-context";
 import { NavSidebarHeader } from "./nav-sidebar-header";
 import NavSidebarSection from "./nav-sidebar-section";
 import NavSidebarMenu from "./nav-sidebar-menu";
 
 function NavSidebarLayout() {
-  const resources = useContext(ResourceContext);
+  const resources = useContext(ResourceProviderContext);
 
   if (!resources?.categories?.length) {
     return <div className="m-2 text-muted-foreground">No resources available</div>;
