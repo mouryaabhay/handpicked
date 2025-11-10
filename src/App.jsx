@@ -5,6 +5,7 @@ import AppHeader from "@/components/header/header-layout";
 import ResourceProvider from "@/providers/resource-provider";
 import PageRoutes from "@/pages/PageRoutes";
 import ThemeProvider from "@/providers/theme-provider";
+import { ThemedToaster } from "@/components/themes/theme-toaster";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <div className="flex flex-col h-screen flex-1">
               <AppHeader />
               <main className="flex-1 overflow-auto p-6">
+                <ThemedToaster />
                 <PageRoutes />
               </main>
             </div>

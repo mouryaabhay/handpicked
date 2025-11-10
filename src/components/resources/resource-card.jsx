@@ -1,22 +1,34 @@
+"use client";
+
 import React from "react";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Copy, Share2 } from "lucide-react";
+import { Copy, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { toast } from "sonner";
 
 export default function ResourceCard({ name, url, imageUrl, subCategory = "New" }) {
-  const handleCopy = (e) => {
+  const handleCopy = async (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(url);
+    toast("Link copied!", {
+      description: `${name} link has been copied to clipboard.`,
+    });
   };
 
   const handleShare = async (e) => {
     e.preventDefault();
-    if (navigator.share) {
-      await navigator.share({ title: name, url });
-    } else {
-      navigator.clipboard.writeText(url);
-      alert("Link copied to clipboard!");
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: name, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        toast("Link copied!", {
+          description: `${name} link has been copied to clipboard.`,
+        });
+      }
+    } catch {
+      // silently fail, no toast needed
     }
   };
 
@@ -28,16 +40,23 @@ export default function ResourceCard({ name, url, imageUrl, subCategory = "New" 
       className="block group"
     >
       <Card className="relative rounded-2xl hover:shadow-lg transition-shadow cursor-pointer overflow-hidden py-0 gap-0">
-        {/* Image */}
-        {imageUrl && (
-          <img
-            src={imageUrl}
-            alt={name}
-            className="h-48 w-full object-cover rounded-2xl"
-          />
-        )}
+        {/* Image Wrapper (16:9 ratio) */}
+        <div className="aspect-[16/9] w-full overflow-hidden">
+          {imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full bg-muted flex items-center justify-center text-sm text-muted-foreground">
+              No Image
+            </div>
+          )}
+        </div>
 
-        {/* Floating buttons */}
+        {/* Floating action buttons */}
         <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
           <Button
             size="icon-sm"
@@ -62,7 +81,7 @@ export default function ResourceCard({ name, url, imageUrl, subCategory = "New" 
           <CardTitle className="text-base font-semibold">{name}</CardTitle>
         </CardContent>
 
-        {/* Badge + Arrow */}
+        {/* Badge */}
         <div className="px-4 pb-4 flex items-center justify-between">
           <Badge variant="secondary" className="text-xs rounded-full">
             {subCategory}

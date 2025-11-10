@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import HeaderSearchbar from "./header-searchbar";
 import HeaderGitHubButton from "./header-github-button";
 import { ThemeToggle } from "@/components/themes/theme-toggle";
+import { RandomZinger } from "../other/random-zingger";
 
 export default function AppHeader() {
   return (
@@ -12,6 +13,8 @@ export default function AppHeader() {
         <SidebarTrigger className="-ml-1" />
 
         <Separator orientation="vertical" className="mx-2 h-1" />
+
+        <RandomZinger interval={15000} />
       </div>
 
       <div className="flex items-center gap-2 h-full">
