@@ -7,6 +7,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
+import { Link } from "react-router-dom";
 
 export function NavSidebarFooter() {
   return (
@@ -18,12 +19,12 @@ export function NavSidebarFooter() {
             asChild
             tooltip="About - How come this site came to be?"
           >
-            <a href="/About" className="flex items-center gap-2 font-semibold">
+            <Link to="/about">
               <User />
               <span>
                 About
               </span>
-            </a>
+            </Link>
           </SidebarMenuButton>
 
           {/* Github button (external link, opens in new tab) */}
@@ -32,14 +33,11 @@ export function NavSidebarFooter() {
               href="https://github.com/mouryaabhay"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 font-semibold"
             >
               <img
-                height="16"
-                width="16"
                 src={githubIcon}
                 alt="GitHub"
-                className="invert-0 dark:invert transition-all"
+                className="h-4 w-4 invert-0 dark:invert transition-all"
               />
               <span>
                 @mouryaabhay
@@ -56,14 +54,11 @@ export function NavSidebarFooter() {
               href="https://discord.gg/your-server-invite"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 font-semibold"
             >
               <img
-                height="16"
-                width="16"
                 src={discordIcon}
                 alt="Discord"
-                className="invert-0 dark:invert transition-all"
+                className="h-4 w-4 invert-0 dark:invert transition-all"
               />
               <span>
                 Creation Guide

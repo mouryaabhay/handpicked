@@ -15,11 +15,9 @@ export default function HeaderGitHubButton() {
         className="dark:text-foreground flex items-center gap-1"
       >
         <img
-          height="16"
-          width="16"
           src={githubIcon}
           alt="GitHub"
-          className="invert-0 dark:invert transition-all"
+          className="h-4 w-4 invert-0 dark:invert transition-all"
         />
 
         <GitHubStars repoOwner={repoOwner} repoName={repoName} />

@@ -1,12 +1,11 @@
 import { Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
-
 import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { Link } from "react-router-dom";
 
 export function NavSidebarHeader() {
   return (
@@ -14,11 +13,9 @@ export function NavSidebarHeader() {
       <SidebarMenu>
         <SidebarMenuItem>
           <SidebarMenuButton asChild tooltip="Home">
-            <Link to="/" className="flex items-center gap-2 font-semibold">
+            <Link to="/">
               <Sparkles />
-              <span>
-                Handpicked.dev
-              </span>
+              <span>Handpicked.dev</span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem>
