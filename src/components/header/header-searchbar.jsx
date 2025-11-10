@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,10 +13,31 @@ import {
 import { Command, Search, Settings, User, Folder } from "lucide-react";
 
 export default function HeaderSearchbar() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [isMac, setIsMac] = useState(false);
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
+    const detectOS = async () => {
+      try {
+        if (navigator.userAgentData) {
+          const platform = (
+            await navigator.userAgentData.getHighEntropyValues(["platform"])
+          ).platform;
+          setIsMac(platform.toLowerCase().includes("mac"));
+        } else {
+          // Fallback for older browsers
+          setIsMac(/Mac|iPhone|iPad|iPod/.test(navigator.userAgent));
+        }
+      } catch {
+        // Just in case
+        setIsMac(false);
+      }
+    };
+    detectOS();
+  }, []);
+
+  useEffect(() => {
     const down = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
@@ -33,17 +54,14 @@ export default function HeaderSearchbar() {
         variant="outline"
         size="sm"
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2"
+        className="flex items-center gap-0"
       >
         <Search />
 
-        <span className="hidden sm:inline text-sm text-muted-foreground">
-          Search resources...
-        </span>
-
-        <span className="flex ml-2 rounded bg-muted px-1.5 text-[12px] font-medium text-muted-foreground">
-          <Command size={16} /> + K
-        </span>
+        <kbd className="flex gap-1 ml-2 rounded bg-muted px-1.5 py-0.5 text-[12px] font-medium text-muted-foreground items-center">
+          {isMac ? <Command size={10} /> : <span>Ctrl</span>}
+          <span>K</span>
+        </kbd>
       </Button>
 
       {/* Command Dialog */}
@@ -62,6 +80,7 @@ export default function HeaderSearchbar() {
               <Folder className="mr-2 h-4 w-4" />
               <span>Resources</span>
             </CommandItem>
+
             <CommandItem
               onSelect={() => {
                 navigate("/settings");
@@ -71,6 +90,7 @@ export default function HeaderSearchbar() {
               <Settings className="mr-2 h-4 w-4" />
               <span>Settings</span>
             </CommandItem>
+
             <CommandItem
               onSelect={() => {
                 navigate("/profile");

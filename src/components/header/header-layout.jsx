@@ -1,9 +1,8 @@
 import React from "react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
-import HeaderCurrentSection from "./header-current-section";
 import HeaderSearchbar from "./header-searchbar";
-import HeaderGitHubButton from "./header-githubstar";
+import HeaderGitHubButton from "./header-github-button";
 import { ThemeToggle } from "@/components/themes/theme-toggle";
 
 export default function AppHeader() {
@@ -13,8 +12,6 @@ export default function AppHeader() {
         <SidebarTrigger className="-ml-1" />
 
         <Separator orientation="vertical" className="mx-2 h-1" />
-
-        <HeaderCurrentSection className="text-base font-medium" />
       </div>
 
       <div className="flex items-center gap-2 h-full">

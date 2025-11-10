@@ -7,6 +7,20 @@ export function GitHubStars({ repoOwner, repoName }) {
   const cacheKey = `github_stars_${repoOwner}_${repoName}`;
   const apiEndpoint = `https://api.github.com/repos/${repoOwner}/${repoName}`;
 
+  const formatStarCount = (stars) => {
+    if (stars < 1000) return `${stars}`;
+
+    if (stars < 1_000_000) {
+      const value = stars / 1000;
+      const formatted = value.toFixed(1);
+      return formatted.endsWith(".0") ? `${parseInt(formatted)}k` : `${formatted}k`;
+    }
+
+    const value = stars / 1_000_000;
+    const formatted = value.toFixed(1);
+    return formatted.endsWith(".0") ? `${parseInt(formatted)}M` : `${formatted}M`;
+  };
+
   const fetchStars = useCallback(
     async (refresh = false) => {
       if (!refresh) {
@@ -30,9 +44,9 @@ export function GitHubStars({ repoOwner, repoName }) {
 
   useEffect(() => {
     fetchStars();
-    const interval = setInterval(() => fetchStars(true), 86400000);
+    const interval = setInterval(() => fetchStars(true), 86400000); // 1 day
     return () => clearInterval(interval);
   }, [fetchStars]);
 
-  return <>{stars?.toLocaleString() ?? "GitHub"}</>;
+  return <>{stars !== null ? formatStarCount(stars) : "GitHub"}</>;
 }

@@ -10,7 +10,7 @@ export default function ResourceCard({ name, url, imageUrl }) {
       rel="noopener noreferrer"
       className="block group"
     >
-      <Card className="hover:shadow-lg transition-shadow cursor-pointer gap-4 p-4">
+      <Card className="rounded-3xl hover:shadow-lg transition-shadow cursor-pointer gap-4 p-4">
         {imageUrl && (
           <img src={imageUrl} alt={name} className="h-48 rounded-lg" />
         )}

@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="mt-20 mb-24 flex flex-col items-center justify-center px-6 text-center">
-        {/* 🔔 Badge */}
+        {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-600">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
@@ -39,10 +39,10 @@ export default function HomePage() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Button size="lg" onClick={handleScrollToResources}>
+            <Button size="sm" onClick={handleScrollToResources}>
               Browse Resources
             </Button>
-            <Button size="lg" variant="secondary" onClick={handleOpenForm}>
+            <Button size="sm" variant="secondary" onClick={handleOpenForm}>
               Add Resource
             </Button>
           </div>

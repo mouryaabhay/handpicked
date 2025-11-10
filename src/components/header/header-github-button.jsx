@@ -7,7 +7,7 @@ export default function HeaderGitHubButton() {
   const { repoOwner, repoName } = handpickedProjectDetails;
 
   return (
-    <Button asChild variant="outline" className="hidden sm:flex">
+    <Button asChild size="sm" variant="ghost" className="sm:flex">
       <a
         href={`https://github.com/${repoOwner}/${repoName}`}
         rel="noopener noreferrer"
