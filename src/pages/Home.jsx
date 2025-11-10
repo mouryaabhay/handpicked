@@ -61,30 +61,30 @@ export default function HomePage() {
         <ResourcesList />
       </div>
 
-      <footer class="py-8 text-center text-sm text-gray-400 border-t border-gray-800">
+      <footer className="py-8 text-center text-sm text-gray-400 border-t border-gray-800">
         <p>Handpicked.dev © 2025 — Curated by Developers</p>
-        <div class="flex justify-center gap-4 mt-2">
-          <a href="/about" class="hover:text-white">
+        <div className="flex justify-center gap-4 mt-2">
+          <a href="/about" className="hover:text-white">
             About
           </a>
           <a
             href="https://discord.gg/yourinvite"
             target="_blank"
-            class="hover:text-white"
+            className="hover:text-white"
           >
             Join Discord
           </a>
           <a
             href="https://forms.gle/..."
             target="_blank"
-            class="hover:text-white"
+            className="hover:text-white"
           >
             Submit Resource
           </a>
           <a
             href="https://github.com/..."
             target="_blank"
-            class="hover:text-white"
+            className="hover:text-white"
           >
             GitHub
           </a>
