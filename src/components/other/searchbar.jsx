@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   InputGroup,
   InputGroupInput,
@@ -22,7 +20,6 @@ export default function Searchbar({ value, onChange }) {
         inputRef.current?.focus();
       }
     };
-
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);

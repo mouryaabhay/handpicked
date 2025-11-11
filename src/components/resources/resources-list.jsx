@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useContext, useMemo } from "react";
 import { ResourceProviderContext } from "@/contexts/resource-context";
 import { Separator } from "@/components/ui/separator";
@@ -51,13 +49,11 @@ export default function ResourcesList({ query = "" }) {
             id={categoryId}
             className="space-y-4 p-6 scroll-mt-20"
           >
-            {/* Category Header */}
             <div className="flex items-center gap-4 px-0 justify-start w-full">
               <h1 className="text-2xl font-bold truncate">{category.name}</h1>
               <Separator className="flex-1" />
             </div>
 
-            {/* Resource Cards */}
             <div className="flex flex-wrap gap-4 justify-start">
               {category.tags.map((resource) => (
                 <ResourceCard
