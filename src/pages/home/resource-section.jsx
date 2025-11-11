@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ResourcesList from "@/components/resources/resources-list";
+import ResourcesList from "@/components/resources/resource-list";
 import Searchbar from "@/components/other/searchbar";
 import { useDebounce } from "@/hooks/use-debounce";
 
