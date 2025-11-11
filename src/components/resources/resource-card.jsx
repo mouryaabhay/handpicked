@@ -63,12 +63,12 @@ export default function ResourceCard({
         </div>
 
         {/* Title */}
-        <CardContent className="px-4 mt-4 mb-2">
+        <CardContent className="mx-4 mt-4 mb-2 p-0">
           <CardTitle className="text-base font-semibold">{name}</CardTitle>
         </CardContent>
 
         {/* Tags / Badges */}
-        <div className="px-4 pb-4 flex items-center justify-between">
+        <div className="mx-4 mb-4 flex align-middle items-center justify-between">
           <ResourceTags tags={tags} badges={badges} />
         </div>
       </a>
