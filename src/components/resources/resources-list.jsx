@@ -54,7 +54,7 @@ export default function ResourcesList({ query = "" }) {
                   url={resource.url}
                   imageUrl={resource.imageUrl}
                   subCategory={resource.tags?.join(", ") || "General"}
-                  className="flex-1 min-w-[200px] sm:min-w-[240px] md:min-w-[256px] max-w-xs"
+                  className="flex-1 min-w-[200px] sm:min-w-60 md:min-w-64 max-w-xs"
                 />
               ))}
             </div>

@@ -31,7 +31,7 @@ export default function ResourceCard({
     <Card className="relative rounded hover:shadow-lg transition-shadow cursor-pointer overflow-hidden gap-0 py-0">
       <a href={url} target="_blank" rel="noopener noreferrer" className={`block ${className}`}>
         {/* Image */}
-        <div className="aspect-[16/9] w-full overflow-hidden">
+        <div className="aspect-video w-full overflow-hidden">
           <img src={imageUrl} alt={name} className="w-full h-full object-cover bg-muted" loading="lazy" />
         </div>
 

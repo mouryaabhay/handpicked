@@ -12,7 +12,7 @@ const taglines = [
   { text: "Good code is like a good joke, it doesn't need to be explained. 😂", weight: 3 },
   { text: "I spent 4 hours debugging, but I'm not sure what I fixed. 🤷‍♂️", weight: 4 },
   { text: "I write code to solve problems I don't have yet! 🤔", weight: 5 },
-  { text: "Infinite loop of: Code ➡ Break ➡ Fix ➡ Repeat 🔁", weight: 1 },
+  { text: "Infinite loop of: Code → Break → Fix → Repeat 🔁", weight: 1 },
   { text: "It works, But how? Let's not think about it! 🤔", weight: 5 },
   { text: "My code comments are more creative than my GitHub README! UwU", weight: 2 },
   { text: "Naming variables: The real programming challenge! 🤯", weight: 1 },
@@ -29,7 +29,7 @@ const taglines = [
   { text: "Keyboard warrior: Ctrl+C, Ctrl+V expert 🖱️", weight: 2 },
   { text: "Commit messages: Lies we tell ourselves daily 📝", weight: 3 },
   { text: "Rubber duck debugging: Quack your way to success 🦆", weight: 2 },
-  { text: "I turn coffee into code ☕➡💻", weight: 4 },
+  { text: "I turn coffee into code ☕ → 💻", weight: 4 },
   { text: "Syntax errors: The universe's way of trolling me 🌌", weight: 5 },
   { text: "Debugging: Removing the needles from the haystack 🧵", weight: 3 },
   { text: "Merge conflicts: Where friendships go to die 💔", weight: 2 },
@@ -39,7 +39,7 @@ const taglines = [
   { text: "Keyboard shortcuts > Superpowers ✨", weight: 3 },
   { text: "Sleep is for the weak, code is for the brave 🦸‍♂️", weight: 4 },
   { text: "Programming is 10% typing and 90% googling 🌐", weight: 5 },
-  { text: "Refactoring: Turning spaghetti into lasagna 🍝➡🍲", weight: 3 },
+  { text: "Refactoring: Turning spaghetti into lasagna 🍝 → 🍲", weight: 3 },
   { text: "Console.log: The debugging swiss army knife 🛠️", weight: 6 },
 ];
 
