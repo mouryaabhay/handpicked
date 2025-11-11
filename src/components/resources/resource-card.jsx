@@ -7,7 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 
-export default function ResourceCard({ name, url, imageUrl, subCategory = "New" }) {
+export default function ResourceCard({
+  name,
+  url,
+  imageUrl,
+  subCategory = "New",
+  className = "",
+}) {
   const handleCopy = async (e) => {
     e.preventDefault();
     await navigator.clipboard.writeText(url);
@@ -28,7 +34,7 @@ export default function ResourceCard({ name, url, imageUrl, subCategory = "New" 
         });
       }
     } catch {
-      // silently fail, no toast needed
+      // silently fail
     }
   };
 
@@ -37,23 +43,17 @@ export default function ResourceCard({ name, url, imageUrl, subCategory = "New" 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block group"
+      className={`block group ${className}`}
     >
-      <Card className="relative rounded-2xl hover:shadow-lg transition-shadow cursor-pointer overflow-hidden py-0 gap-0">
+      <Card className="relative rounded hover:shadow-lg transition-shadow cursor-pointer overflow-hidden gap-0 py-0">
         {/* Image Wrapper (16:9 ratio) */}
         <div className="aspect-[16/9] w-full overflow-hidden">
-          {imageUrl ? (
-            <img
-              src={imageUrl}
-              alt={name}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          ) : (
-            <div className="w-full h-full bg-muted flex items-center justify-center text-sm text-muted-foreground">
-              No Image
-            </div>
-          )}
+          <img
+            src={imageUrl}
+            alt={name}
+            className="w-full h-full object-cover bg-muted flex items-center justify-center text-sm text-muted-foreground"
+            loading="lazy"
+          />
         </div>
 
         {/* Floating action buttons */}
@@ -77,7 +77,7 @@ export default function ResourceCard({ name, url, imageUrl, subCategory = "New" 
         </div>
 
         {/* Title */}
-        <CardContent className="px-0 mx-4 mt-4 mb-2">
+        <CardContent className="px-4 mt-4 mb-2">
           <CardTitle className="text-base font-semibold">{name}</CardTitle>
         </CardContent>
 

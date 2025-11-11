@@ -12,36 +12,32 @@ export default function ResourcesList() {
   return (
     <div className="space-y-8">
       {categories.map((category) => {
-        // Convert category name to a URL-friendly id
         const categoryId = category.name.toLowerCase().replace(/\s+/g, "-");
 
         return (
           <div
             key={category.name}
-            id={categoryId} // <-- this makes it scrollable via anchor
-            className="space-y-4 border-2 rounded-lg p-6 scroll-mt-20"
+            id={categoryId}
+            className="space-y-4 p-6 scroll-mt-20"
           >
             {/* Category Header */}
-            <h1 className="flex text-2xl font-bold">{category.name}</h1>
+            <div className="flex items-center gap-4 px-0 justify-start w-full">
+              <h1 className="text-2xl font-bold truncate">{category.name}</h1>
+              <Separator className="flex-1" />
+            </div>
 
-            <Separator />
-
-            {/* Unified Resource List for all Subcategories */}
+            {/* Resource Cards */}
             <div className="flex flex-wrap gap-4 justify-start">
-              {category.subCategories.map((subCategory) =>
+              {category.subCategories.flatMap((subCategory) =>
                 subCategory.resources.map((resource) => (
-                  <div
+                  <ResourceCard
                     key={resource.name}
-                    className="flex-1 min-w-[240px] max-w-[300px]"
-                  >
-                    <ResourceCard
-                      name={resource.name}
-                      url={resource.url}
-                      iconUrl={resource.iconUrl}
-                      imageUrl={resource.imageUrl}
-                      subCategory={subCategory.name}
-                    />
-                  </div>
+                    name={resource.name}
+                    url={resource.url}
+                    imageUrl={resource.imageUrl}
+                    subCategory={subCategory.name}
+                    className="flex-1 min-w-[200px] sm:min-w-[240px] md:min-w-[256px] max-w-xs"
+                  />
                 ))
               )}
             </div>

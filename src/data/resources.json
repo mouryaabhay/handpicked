@@ -21,6 +21,18 @@
             },
             {
               "iconUrl": "",
+              "name": "CloseRouter",
+              "url": "https://www.closerouter.com/",
+              "imageUrl": "https://picsum.photos/300"
+            },
+            {
+              "iconUrl": "",
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/",
+              "imageUrl": "https://picsum.photos/300"
+            },
+            {
+              "iconUrl": "",
               "name": "Teachable Machine",
               "url": "https://teachablemachine.withgoogle.com/",
               "imageUrl": "https://picsum.photos/300"
@@ -451,55 +463,8 @@
           "resources": [
             {
               "iconUrl": "",
-              "name": "CloseRouter",
-              "url": "https://www.closerouter.com/",
-              "imageUrl": "https://picsum.photos/300"
-            },
-            {
-              "iconUrl": "",
-              "name": "Cobalt Tools",
-              "url": "https://cobalt.tools/",
-              "imageUrl": "https://picsum.photos/300"
-            },
-            {
-              "iconUrl": "",
               "name": "Visual Subnet Calculator",
               "url": "https://visualsubnetcalc.com/",
-              "imageUrl": "https://picsum.photos/300"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Typography",
-      "icon": "Type",
-      "subCategories": [
-        {
-          "name": "Font Resources",
-          "resources": [
-            {
-              "iconUrl": "",
-              "name": "Fontshare - Satoshi",
-              "url": "https://www.fontshare.com/fonts/satoshi",
-              "imageUrl": "https://picsum.photos/300"
-            },
-            {
-              "iconUrl": "",
-              "name": "Fontshare - Switzer",
-              "url": "https://www.fontshare.com/fonts/switzer",
-              "imageUrl": "https://picsum.photos/300"
-            },
-            {
-              "iconUrl": "",
-              "name": "Google Fonts - Atkinson Hyperlegible",
-              "url": "https://fonts.google.com/specimen/Atkinson+Hyperlegible",
-              "imageUrl": "https://picsum.photos/300"
-            },
-            {
-              "iconUrl": "",
-              "name": "Google Fonts - Manrope",
-              "url": "https://fonts.google.com/specimen/Manrope",
               "imageUrl": "https://picsum.photos/300"
             }
           ]
@@ -511,23 +476,24 @@
       "icon": "Wrench",
       "subCategories": [
         {
-          "name": "Data Management",
-          "resources": [
-            {
-              "iconUrl": "",
-              "name": "Google Takeout",
-              "url": "https://takeout.google.com/",
-              "imageUrl": "https://picsum.photos/300"
-            }
-          ]
-        },
-        {
           "name": "Utility Tools",
           "resources": [
             {
               "iconUrl": "",
               "name": "TinyWow",
               "url": "https://tinywow.com/",
+              "imageUrl": "https://picsum.photos/300"
+            },
+            {
+              "iconUrl": "",
+              "name": "Cobalt Tools",
+              "url": "https://cobalt.tools/",
+              "imageUrl": "https://picsum.photos/300"
+            },
+            {
+              "iconUrl": "",
+              "name": "Remove BG",
+              "url": "https://www.remove.bg/",
               "imageUrl": "https://picsum.photos/300"
             }
           ]

@@ -15,7 +15,7 @@ function App() {
           <NavSidebar>
             <div className="flex flex-col h-screen flex-1">
               <AppHeader />
-              <main className="flex-1">
+              <main>
                 <ThemedToaster />
                 <PageRoutes />
               </main>

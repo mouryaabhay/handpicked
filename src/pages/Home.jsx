@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import ResourcesList from "@/components/resources/resources-list";
 import Searchbar from "@/components/other/searchbar";
+import { Search, Shapes } from "lucide-react";
 
 export default function HomePage() {
   const handleScrollToResources = () => {
@@ -23,7 +24,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="mt-20 mb-24 flex flex-col items-center justify-center px-6 text-center">
+      <section className="my-20 flex flex-col items-center justify-center px-6 text-center">
         {/* Badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-600">
           <span className="relative flex h-2 w-2">
@@ -48,9 +49,11 @@ export default function HomePage() {
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Button size="sm" onClick={handleScrollToResources}>
-              Browse Resources
+              <Search />
+              Explore
             </Button>
             <Button size="sm" variant="secondary" onClick={handleOpenForm}>
+              <Shapes />
               Submit Resource
             </Button>
           </div>
@@ -58,7 +61,7 @@ export default function HomePage() {
       </section>
 
       {/* Resources Section */}
-      <div id="resources-section" className="flex flex-col gap-4 px-6 sm:px-12 lg:px-20">
+      <div id="resources-section" className="flex flex-col gap-4 p-6 sm:px-12 lg:px-20">
         <Searchbar />
         <ResourcesList />
       </div>

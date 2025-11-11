@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Boxes } from "lucide-react";
 import {
   SidebarHeader,
   SidebarMenu,
@@ -14,8 +14,8 @@ export function NavSidebarHeader() {
         <SidebarMenuItem>
           <SidebarMenuButton asChild tooltip="Home">
             <Link to="/">
-              <Sparkles />
-              <span>Handpicked.dev</span>
+              <Boxes />
+              <span className="font-semibold">Handpicked</span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem>

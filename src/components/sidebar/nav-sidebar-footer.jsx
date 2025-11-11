@@ -28,7 +28,7 @@ export function NavSidebarFooter() {
           </SidebarMenuButton>
 
           {/* Github button (external link, opens in new tab) */}
-          <SidebarMenuButton asChild tooltip="Github - @mouryaabhay">
+          <SidebarMenuButton asChild tooltip="@mouryaabhay (Github Profile)">
             <a
               href="https://github.com/mouryaabhay"
               target="_blank"
@@ -48,7 +48,7 @@ export function NavSidebarFooter() {
           {/* Discord button (external link, opens in new tab) */}
           <SidebarMenuButton
             asChild
-            tooltip="Discord Community - Creation Guide"
+            tooltip="Creation Guide (Discord Server)"
           >
             <a
               href="https://discord.gg/your-server-invite"

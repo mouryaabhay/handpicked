@@ -1,18 +1,23 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import * as Icons from "lucide-react";
 import { Sidebar, SidebarContent } from "@/components/ui/sidebar";
 import { ResourceProviderContext } from "@/contexts/resource-context";
 import { NavSidebarHeader } from "./nav-sidebar-header";
-import NavSidebarSection from "./nav-sidebar-section";
+import NavSidebarGroup from "./nav-sidebar-group";
 import NavSidebarMenu from "./nav-sidebar-menu";
 import { NavSidebarFooter } from "./nav-sidebar-footer";
 
 function NavSidebarLayout() {
-  const resources = useContext(ResourceProviderContext);
+  let resources = useContext(ResourceProviderContext);
 
   if (!resources?.categories?.length) {
     return (
-      <div className="m-2 text-muted-foreground">No resources available</div>
+      <Sidebar collapsible="icon">
+        <div className="m-4 text-sm font-semibold text-muted-foreground flex items-center gap-2">
+          <Icons.CircleSlash size={16} />
+          <span>No categories found</span>
+        </div>
+      </Sidebar>
     );
   }
 
@@ -28,13 +33,13 @@ function NavSidebarLayout() {
   }));
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant="floating">
       <NavSidebarHeader />
 
       <SidebarContent className="overflow-x-hidden">
-        <NavSidebarSection>
+        <NavSidebarGroup>
           <NavSidebarMenu items={menuItems} />
-        </NavSidebarSection>
+        </NavSidebarGroup>
       </SidebarContent>
 
       <NavSidebarFooter />

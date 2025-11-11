@@ -1,16 +1,15 @@
 import React from "react";
 import {
   SidebarGroup,
-  SidebarGroupLabel,
   SidebarGroupContent,
 } from "@/components/ui/sidebar";
 
-function NavSidebarSection({ children, className = "" }) {
+function NavSidebarGroup({ children }) {
   return (
-    <SidebarGroup className={className}>
+    <SidebarGroup>
       <SidebarGroupContent>{children}</SidebarGroupContent>
     </SidebarGroup>
   );
 }
 
-export default NavSidebarSection;
+export default NavSidebarGroup;
