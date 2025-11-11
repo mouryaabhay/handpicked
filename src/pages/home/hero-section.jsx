@@ -4,11 +4,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Search, Shapes } from "lucide-react";
 import { handleScroll } from "@/utils/handle-scroll";
+import { googleFormURL } from "@/constant/global";
 
 export default function HeroSection() {
   const handleOpenForm = () => {
     window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSf-FRDJzHWCEKRV9dWjC6dV9TScyBWqsXo6nZ3u37IJtBI4Ng/viewform?usp=sharing&ouid=100678720259994445996",
+      googleFormURL,
       "_blank"
     );
   };
@@ -16,10 +17,10 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="my-20 flex flex-col items-center justify-center px-4 lg:px-6 text-center"
+      className="my-20 flex flex-col items-center justify-center mx-4 lg:mx-20 text-center"
     >
       {/* Badge */}
-      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-600">
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1.5 text-sm font-medium text-green-600">
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
@@ -27,7 +28,7 @@ export default function HeroSection() {
         Handpicked.dev is now live!
       </div>
 
-      <div className="max-w-5xl space-y-6">
+      <div className="max-w-4xl space-y-6">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-balance">
           Built by developers,
           <br />
@@ -39,19 +40,19 @@ export default function HeroSection() {
           growing library of frameworks, ideas, and resources that make
           building faster, smarter, and more enjoyable.
         </p>
+        </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 pt-4">
-          <Button size="sm" onClick={() => handleScroll("resources-section")}>
+        <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <Button size="lg" onClick={() => handleScroll("resources-section")}>
             <Search />
-            Explore
+            Explore Resources
           </Button>
-          <Button size="sm" variant="secondary" onClick={handleOpenForm}>
+          <Button size="lg" variant="secondary" onClick={handleOpenForm}>
             <Shapes />
             Submit Resource
           </Button>
         </div>
-      </div>
     </section>
   );
 }

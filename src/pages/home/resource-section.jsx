@@ -8,7 +8,7 @@ export default function ResourcesSection() {
   return (
     <div
       id="resources-section"
-      className="flex flex-col gap-4 my-6 mx-14 sm:px-12 lg:px-20"
+      className="flex flex-col gap-4 my-6 mx-6 lg:mx-24"
     >
       <Searchbar />
       <ResourcesList />

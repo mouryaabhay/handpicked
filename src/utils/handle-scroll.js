@@ -1,4 +1,4 @@
-export function handleScroll(id, offset = 0) {
+export function handleScroll(id, offset = 64) {
   const section = document.getElementById(id);
   if (!section) return;
 

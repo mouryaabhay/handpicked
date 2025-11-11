@@ -1,4 +1,6 @@
 export const handpickedProjectDetails = {
   repoOwner: "mouryaabhay",
-  repoName: "rss-yuki"
+  repoName: "handpicked"
 };
+
+export const googleFormURL = "https://forms.gle/8U4VRGRajDkYtA4k9";

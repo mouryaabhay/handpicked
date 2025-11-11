@@ -8,6 +8,7 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
+import { handpickedProjectDetails } from "@/constant/global";
 
 export default function NavSidebarFooter() {
   return (
@@ -31,7 +32,7 @@ export default function NavSidebarFooter() {
             tooltip="@mouryaabhay (Github Profile)"
           >
             <a
-              href="https://github.com/mouryaabhay"
+              href={`https://github.com/${handpickedProjectDetails.repoOwner}`}
               target="_blank"
               rel="noopener noreferrer"
             >
