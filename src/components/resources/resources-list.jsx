@@ -1,19 +1,48 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { ResourceProviderContext } from "@/contexts/resource-context";
 import { Separator } from "@/components/ui/separator";
 import ResourceCard from "./resource-card";
 
-export default function ResourcesList() {
+export default function ResourcesList({ query = "" }) {
   const { categories } = useContext(ResourceProviderContext);
+  const searchTerm = query.toLowerCase().trim();
 
-  if (!categories || categories.length === 0)
-    return <p>No resources available.</p>;
+  const filteredCategories = useMemo(() => {
+    if (!categories || categories.length === 0) return [];
+
+    if (!searchTerm) return categories;
+
+    return categories
+      .map((category) => {
+        const matchingResources = category.tags.filter((resource) => {
+          const haystack = [
+            resource.name,
+            resource.url,
+            ...(resource.tags || []),
+            category.name,
+          ]
+            .join(" ")
+            .toLowerCase();
+
+          return haystack.includes(searchTerm);
+        });
+
+        if (matchingResources.length > 0) {
+          return { ...category, tags: matchingResources };
+        }
+        return null;
+      })
+      .filter(Boolean);
+  }, [categories, searchTerm]);
+
+  if (!filteredCategories || filteredCategories.length === 0)
+    return <p>No resources found.</p>;
 
   return (
     <div className="space-y-8">
-      {categories.map((category) => {
+      {filteredCategories.map((category) => {
         const categoryId = category.name.toLowerCase().replace(/\s+/g, "-");
 
         return (
@@ -32,7 +61,7 @@ export default function ResourcesList() {
             <div className="flex flex-wrap gap-4 justify-start">
               {category.tags.map((resource) => (
                 <ResourceCard
-                  key={resource.name}
+                  key={resource.url}
                   name={resource.name}
                   url={resource.url}
                   imageUrl={resource.imageUrl}
