@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
 
-export function NavSidebarFooter() {
+export default function NavSidebarFooter() {
   return (
     <SidebarFooter className="border-t">
       <SidebarMenu>

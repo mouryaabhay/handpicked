@@ -48,7 +48,7 @@ function weightedRandomSelect(items) {
   return pool[Math.floor(Math.random() * pool.length)];
 }
 
-export function RandomZinger() {
+export default function RandomZinger() {
   const [tagline, setTagline] = useState("");
 
   useEffect(() => {

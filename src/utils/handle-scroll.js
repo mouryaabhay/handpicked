@@ -1,6 +1,12 @@
-export function handleScroll(id) {
+export function handleScroll(id, offset = 0) {
   const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+  if (!section) return;
+
+  const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { SidebarGroup, SidebarGroupContent } from "@/components/ui/sidebar";
 
-function NavSidebarGroup({ children }) {
+export default function NavSidebarGroup({ children }) {
   return (
     <>
       <SidebarGroup>
@@ -10,5 +10,3 @@ function NavSidebarGroup({ children }) {
     </>
   );
 }
-
-export default NavSidebarGroup;
