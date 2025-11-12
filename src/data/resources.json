@@ -8,17 +8,17 @@
           "iconUrl": "",
           "name": "Google AI Studio",
           "url": "https://aistudio.google.com/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/aistudio.google.com_.png?token=GHSAT0AAAAAADNZ2JMEUPHCMFYSFY3ASSWW2IUOUUA",
           "tags": ["AI Platforms", "Machine Learning", "APIs", "Free Tools"],
-          "badges": ["new", "featured", "popular"]
+          "badges": []
         },
         {
           "iconUrl": "",
           "name": "OpenRouter",
           "url": "https://openrouter.ai/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "src/assets/previews/openrouter.ai_.png",
           "tags": ["AI Platforms", "APIs", "Open Source"],
-          "badges": ["new"]
+          "badges": []
         },
         {
           "iconUrl": "",
@@ -26,7 +26,7 @@
           "url": "https://www.closerouter.com/",
           "imageUrl": "https://picsum.photos/300",
           "tags": ["AI Platforms", "APIs", "Tools"],
-          "badges": ["new", "featured"]
+          "badges": []
         },
         {
           "iconUrl": "",
@@ -420,7 +420,7 @@
       "tags": [
         {
           "iconUrl": "",
-          "name": "Behance – Restaurant Admin Dashboard",
+          "name": "Behance - Restaurant Admin Dashboard",
           "url": "https://www.behance.net/gallery/171793989/Streamlining-Restaurant-Operations-%28Admin-Dashboard%29",
           "imageUrl": "https://picsum.photos/300",
           "tags": ["Design Case Studies", "UI/UX", "Admin Dashboard"],

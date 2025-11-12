@@ -59,11 +59,11 @@ export default function ResourceCard({
         className="flex flex-col h-full"
       >
         {/* Image */}
-        <CardContent className="w-full p-0 aspect-video overflow-hidden">
+        <CardContent className="w-full rounded-lg p-0 aspect-video overflow-hidden">
           <img
             src={imageUrl}
             alt={name}
-            className="w-full h-full object-cover bg-muted"
+            className="w-full h-full object-cover bg-muted rounded"
             loading="lazy"
           />
         </CardContent>
