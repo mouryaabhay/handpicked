@@ -1,16 +1,100 @@
-# React + Vite
+# 🌟 Handpicked
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A curated collection of **frontend development resources**, handpicked by developers — for developers.
+> Built to save you from endless hunting and help you focus on **learning, building, and growing**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About
 
-## React Compiler
+When I first started in frontend development and web design, I found myself spending **more time searching for quality tools** and **resources** than actually improving my skills.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Handpicked** was born from that frustration — a place where all the essentials are gathered, organized, and ready to use.
+Now, it exists to help others who face the same struggles — with resources **curated by me and amazing contributors** from across the web.
 
-## Expanding the ESLint configuration
+Whether you’re a beginner or a pro, **Handpicked** aims to be your go-to starting point for modern web development.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Features
+
+- 🔍 **Curated Resources** — Only the best, hand-selected by contributors.
+- ⚡ **Built with Vite + React** — Fast, modular, and developer-friendly foundation.
+- 🧩 **ESLint & Prettier Ready** — Clean, consistent code every time.
+- 🛠️ **Easy to Extend** — Add new categories, tools, or UI components effortlessly.
+- 🤝 **Community-Driven** — Open for contributors who love sharing great resources.
+
+---
+
+## 🏗️ Tech Stack
+
+- [React](https://react.dev/) – Frontend framework
+- [Vite](https://vitejs.dev/) – Lightning-fast development bundler
+- [ESLint](https://eslint.org/) – Linting for code quality
+- [Prettier](https://prettier.io/) – Code formatting consistency
+- [Node.js](https://nodejs.org/) – For package management and scripts
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mouryaabhay/handpicked.git
+cd handpicked
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run locally
+
+```bash
+npm run dev
+```
+
+Open your browser at [http://localhost:5173](http://localhost:5173).
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 📢 How to Contribute
+
+We love contributions — big or small!
+If you have a favorite tool, design kit, or helpful resource, share it with the community.
+
+1. Fork the repo
+2. Create a new branch (`feature/add-new-resource`)
+3. Add your resource or improvement
+4. Commit and push
+5. Open a Pull Request 🎉
+
+> Detailed contribution guidelines can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
+---
+
+## 💬 Community & Support
+
+Have ideas, feedback, or want to collaborate?
+
+* 🐛 [Open an issue](https://github.com/mouryaabhay/handpicked/issues)
+* 💡 [Start a discussion](https://github.com/mouryaabhay/handpicked/discussions)
+
+---
+
+## ✨ A Note from the Creator
+
+> I built Handpicked to save others from the endless search for the “right” tool.
+> Every contribution here helps someone spend less time searching and more time creating.
+> Let’s build a place where developers help each other grow. 🌱
+
+— **Abhay Mourya**
