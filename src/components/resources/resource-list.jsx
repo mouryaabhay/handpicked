@@ -19,12 +19,15 @@ export default function ResourcesList({ query = "" }) {
             resource.name,
             resource.url,
             ...(resource.tags || []),
+            ...(resource.badges || []),
             category.name,
           ]
             .join(" ")
             .toLowerCase();
+
           return haystack.includes(searchTerm);
         });
+
         if (resources.length) return { ...category, tags: resources };
         return null;
       })
