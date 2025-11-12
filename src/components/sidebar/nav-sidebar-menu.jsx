@@ -24,7 +24,7 @@ export default function NavSidebarMenu({ items = [] }) {
           <SidebarMenuButton asChild tooltip="Favorites" className="space-x-2">
             <button onClick={() => handleScroll("favorites")}>
               <Icons.Star />
-              <span>Favorites</span>
+              <span className="whitespace-nowrap">Favorites</span>
               <span className="text-xs text-muted-foreground tabular-nums ml-auto">{bookmarks.length}</span>
             </button>
           </SidebarMenuButton>
@@ -42,7 +42,7 @@ export default function NavSidebarMenu({ items = [] }) {
             <SidebarMenuButton asChild tooltip={title} className="space-x-2">
               <button aria-label={title} onClick={() => handleScroll(categoryId)}>
                 <Icon />
-                <span>{title}</span>
+                <span className="whitespace-nowrap">{title}</span>
                 {count > 0 && <span className="text-xs text-muted-foreground tabular-nums ml-auto">{count}</span>}
               </button>
             </SidebarMenuButton>

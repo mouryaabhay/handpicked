@@ -8,10 +8,7 @@ import { GOOGLE_FORM_URL } from "@/constant/global";
 
 export default function HeroSection() {
   const handleOpenForm = () => {
-    window.open(
-      GOOGLE_FORM_URL,
-      "_blank"
-    );
+    window.open(GOOGLE_FORM_URL, "_blank");
   };
 
   return (
@@ -30,29 +27,26 @@ export default function HeroSection() {
 
       <div className="max-w-4xl space-y-6">
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-balance">
-          Built by developers,
-          <br />
-          for developers who care.
+          Not everything. Just the good stuff.
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground font-medium leading-relaxed">
-          Every tool that matters — handpicked from across the web to create a
-          growing library of frameworks, ideas, and resources that make
-          building faster, smarter, and more enjoyable.
+          Handpicked for creators who value quality over quantity, clarity over
+          clutter, and ideas that actually make things better.
         </p>
-        </div>
+      </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <Button size="lg" onClick={() => handleScroll("resources-section")}>
-            <Search />
-            Explore Resources
-          </Button>
-          <Button size="lg" variant="secondary" onClick={handleOpenForm}>
-            <Shapes />
-            Submit Resource
-          </Button>
-        </div>
+      {/* Action Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
+        <Button size="lg" onClick={() => handleScroll("resources-section")}>
+          <Search />
+          Explore Resources
+        </Button>
+        <Button size="lg" variant="secondary" onClick={handleOpenForm}>
+          <Shapes />
+          Submit Resource
+        </Button>
+      </div>
     </section>
   );
 }

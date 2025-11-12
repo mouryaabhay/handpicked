@@ -1,40 +1,23 @@
 "use client";
 
+import { handpickedProjectDetails } from "@/constant/global";
 import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="py-8 text-center text-sm text-gray-400 border-t border-gray-800">
+    <footer className="py-8 text-center text-sm text-gray-400">
       <p>Handpicked.dev © 2025 — Curated by Developers</p>
-      <div className="flex justify-center gap-4 mt-2">
-        <a href="/about" className="hover:text-white">
-          About
-        </a>
+      <p>
+        Built by{" "}
         <a
-          href="https://discord.gg/yourinvite"
+          href={`https://github.com/${handpickedProjectDetails.repoOwner}`}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-white"
         >
-          Join Discord
+          @{handpickedProjectDetails.repoOwner}
         </a>
-        <a
-          href="https://forms.gle/..."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white"
-        >
-          Submit Resource
-        </a>
-        <a
-          href="https://github.com/..."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-white"
-        >
-          GitHub
-        </a>
-      </div>
+      </p>
     </footer>
   );
 }
