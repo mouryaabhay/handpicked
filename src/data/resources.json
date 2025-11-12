@@ -8,7 +8,7 @@
           "iconUrl": "",
           "name": "Google AI Studio",
           "url": "https://aistudio.google.com/",
-          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/aistudio.google.com_.png?token=GHSAT0AAAAAADNZ2JMEUPHCMFYSFY3ASSWW2IUOUUA",
+          "imageUrl": "https://ai.google.dev/static/site-assets/images/share-ais-03.png",
           "tags": ["AI Platforms", "Machine Learning", "APIs", "Free Tools"],
           "badges": []
         },
@@ -16,7 +16,7 @@
           "iconUrl": "",
           "name": "OpenRouter",
           "url": "https://openrouter.ai/",
-          "imageUrl": "src/assets/previews/openrouter.ai_.png",
+          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/openrouter.png?token=GHSAT0AAAAAADNZ2JMFGPHCABHRD6G66BJC2IUPMFQ",
           "tags": ["AI Platforms", "APIs", "Open Source"],
           "badges": []
         },
@@ -24,7 +24,7 @@
           "iconUrl": "",
           "name": "CloseRouter",
           "url": "https://www.closerouter.com/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/closerouter.png?token=GHSAT0AAAAAADNZ2JMFMOCOECU4EIHORF7O2IUPMPQ",
           "tags": ["AI Platforms", "APIs", "Tools"],
           "badges": []
         },
@@ -32,7 +32,7 @@
           "iconUrl": "",
           "name": "Hugging Face",
           "url": "https://huggingface.co/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/huggingface.png?token=GHSAT0AAAAAADNZ2JMEFODX2SYYORFZWR7A2IUPNDA",
           "tags": ["AI Platforms", "Machine Learning Models", "NLP"],
           "badges": []
         },
@@ -40,7 +40,7 @@
           "iconUrl": "",
           "name": "Teachable Machine",
           "url": "https://teachablemachine.withgoogle.com/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "https://raw.githubusercontent.com/mouryaabhay/handpicked/refs/heads/main/src/assets/previews/teachablemachine.png?token=GHSAT0AAAAAADNZ2JMFCCSQSICKHVTR3TI22IUPNOQ",
           "tags": ["AI Platforms", "Machine Learning", "Educational"],
           "badges": []
         }
@@ -54,7 +54,7 @@
           "iconUrl": "",
           "name": "Accessible Palette",
           "url": "https://accessiblepalette.com/",
-          "imageUrl": "https://picsum.photos/300",
+          "imageUrl": "https://i.ibb.co/fBqr48r/Screenshot-2025-11-10-194635.png",
           "tags": ["Color Palette Tools", "Accessibility", "Design"],
           "badges": []
         },
