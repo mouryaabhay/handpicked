@@ -6,13 +6,7 @@ import { toast } from "sonner";
 import { BookmarksContext } from "@/contexts/bookmarks-context";
 import ResourceTags from "@/components/resources/resource-tags";
 
-export default function ResourceCard({
-  name,
-  url,
-  imageUrl,
-  tags = [],
-  badges = [],
-}) {
+function ResourceCard({ name, url, imageUrl, tags = [], badges = [] }) {
   const { addBookmark, removeBookmark, isBookmarked } =
     useContext(BookmarksContext);
   const bookmarked = isBookmarked(url);
@@ -21,12 +15,14 @@ export default function ResourceCard({
     e.preventDefault();
     if (bookmarked) {
       removeBookmark(url);
-      toast("Bookmark removed", {
+      toast.warning("Bookmark removed", {
         description: `${name} removed from favorites.`,
       });
     } else {
       addBookmark({ name, url, imageUrl, tags, badges });
-      toast("Bookmarked!", { description: `${name} added to favorites.` });
+      toast.success("Bookmarked!", {
+        description: `${name} added to favorites.`,
+      });
     }
   };
 
@@ -37,7 +33,7 @@ export default function ResourceCard({
         size="icon-sm"
         onClick={handleBookmark}
         title={bookmarked ? "Remove Bookmark" : "Add Bookmark"}
-        className={`absolute top-3 right-3 transition-colors duration-200 ${
+        className={`absolute top-3 right-3 transition-transform duration-150 active:scale-90 ${
           bookmarked
             ? "bg-yellow-100 hover:bg-yellow-200 dark:bg-yellow-900/40 dark:hover:bg-yellow-900/60"
             : "bg-secondary hover:bg-secondary/80"
@@ -63,6 +59,7 @@ export default function ResourceCard({
           <img
             src={imageUrl}
             alt={name}
+            onError={(e) => (e.target.src = "https://picsum.photos/1280/740")}
             className="w-full h-full object-cover bg-muted rounded"
             loading="lazy"
           />
@@ -77,3 +74,5 @@ export default function ResourceCard({
     </Card>
   );
 }
+
+export default React.memo(ResourceCard);

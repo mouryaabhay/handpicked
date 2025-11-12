@@ -22,7 +22,7 @@ export default function HeroSection() {
           <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
         </span>
-        Handpicked.dev is now live!
+        Handpicked is now live!
       </div>
 
       <div className="max-w-4xl space-y-6">
