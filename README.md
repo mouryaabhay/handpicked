@@ -85,7 +85,7 @@ If you have a favorite tool, design kit, or helpful resource, share it with the 
 4. Commit and push
 5. Open a Pull Request 🎉
 
-> Detailed contribution guidelines can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md)
+> Detailed contribution guidelines can be found in [`CONTRIBUTING.md`](CONTRIBUTING.MD)
 
 ---
 
