@@ -55,6 +55,18 @@
           "badges": []
         },
         {
+          "name": "Nvidia Nim",
+          "url": "https://build.nvidia.com/",
+          "imageUrl": "https://build.nvidia.com/twitter-image.jpg",
+          "tags": [
+            "AI/ML",
+            "API",
+            "Tool",
+            "Backend Dev"
+          ],
+          "badges": []
+        },
+        {
           "name": "Teachable Machine",
           "url": "https://teachablemachine.withgoogle.com/",
           "imageUrl": "https://teachablemachine.withgoogle.com/assets/img/Hero_image_16x9.jpg",
