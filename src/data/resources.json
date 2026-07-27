@@ -80,10 +80,7 @@
             "AI/ML",
             "Tool"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         }
       ]
     },
@@ -234,9 +231,7 @@
             "Tool",
             "Inspiration"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "Respinner",
@@ -248,9 +243,7 @@
             "Library",
             "React"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     },
@@ -266,9 +259,7 @@
             "Frontend Dev",
             "Tool"
           ],
-          "badges": [
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "Free for Dev",
@@ -303,9 +294,7 @@
             "Frontend Dev",
             "Tool"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     },
@@ -351,10 +340,7 @@
             "Student",
             "Reference"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "Code Wiki",
@@ -366,9 +352,7 @@
             "Reference",
             "Student"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "Wokwi",
@@ -379,10 +363,7 @@
             "Learning",
             "Student"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "With Diode",
@@ -394,9 +375,7 @@
             "Tool",
             "Learning"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "SERVER: Survival Protocol",
@@ -405,10 +384,7 @@
           "tags": [
             "Tool"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "Loot Drop",
@@ -417,9 +393,7 @@
           "tags": [
             "Tool"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     },
@@ -487,9 +461,7 @@
             "Tool",
             "Generator"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     },
@@ -497,6 +469,42 @@
       "name": "Hosts & Databases",
       "icon": "Server",
       "tags": [
+        {
+          "name": "FreeHosts",
+          "url": "https://freehosts.eu/",
+          "imageUrl": "https://freehosts.eu/Src/Images/banner.png",
+          "tags": [
+            "Listing"
+          ],
+          "badges": [
+            "new"
+          ]
+        },
+        {
+          "name": "Free Minecraft Hosting",
+          "url": "https://freeminecrafthostings.com/",
+          "imageUrl": "https://freeminecrafthostings.com/logo.png",
+          "tags": [
+            "Listing"
+          ],
+          "badges": [
+            "new"
+          ]
+        },
+        {
+          "name": "Galactic Hosting",
+          "url": "https://galactichosting.net/",
+          "imageUrl": "https://galactichosting.net/og-image.png",
+          "tags": [
+            "Backend",
+            "Hosting",
+            "Discord",
+            "Tool"
+          ],
+          "badges": [
+            "new"
+          ]
+        },
         {
           "name": "MongoDB Cloud",
           "url": "https://cloud.mongodb.com/",
@@ -519,10 +527,7 @@
             "Database",
             "Tool"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         }
       ]
     },
@@ -649,9 +654,7 @@
             "Library",
             "React"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "Motion Primitives",
@@ -663,9 +666,7 @@
             "React",
             "CSS"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "React Bits",
@@ -676,9 +677,7 @@
             "Library",
             "React"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "Serenity UI",
@@ -689,9 +688,7 @@
             "Library",
             "CSS"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "shadcn/ui",
@@ -703,9 +700,7 @@
             "Library",
             "React"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "StackSorted",
@@ -728,9 +723,7 @@
             "Designer",
             "Library"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "uiverse",
@@ -754,10 +747,7 @@
             "Reference",
             "React"
           ],
-          "badges": [
-            "new",
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "WigggleUI",
@@ -768,9 +758,7 @@
             "Designer",
             "Library"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     },
@@ -806,9 +794,7 @@
           "tags": [
             "Tool"
           ],
-          "badges": [
-            "featured"
-          ]
+          "badges": []
         },
         {
           "name": "TinyWow",
@@ -827,9 +813,7 @@
             "Designer",
             "Tool"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         },
         {
           "name": "Beadifier",
@@ -839,9 +823,7 @@
             "Tool",
             "Generator"
           ],
-          "badges": [
-            "new"
-          ]
+          "badges": []
         }
       ]
     }
